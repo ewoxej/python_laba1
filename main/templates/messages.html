@@ -1,0 +1,10 @@
+<h1>Messages to me<h1>
+{% for msg in msg_recv %}
+<h2>{{msg.sender.username}} {{msg.timestamp}}<h2>
+<p>{{msg.content}}</p>
+{% endfor %}
+<h1>Messages from me<h1>
+{% for msg in msg_sent %}
+<h2>{{msg.recipient.username}} {{msg.timestamp}}<h2>
+<p>{{msg.content}}</p>
+{% endfor %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your chat with {{nickname}}</h2>
+<form method="post" action="/accounts/profile/">
+{% csrf_token %}
+<button type="submit" style="background-color:red;">Back</button>
+</form>
+{% for msg in msgs %}
+<b>{{msg.sender}} {{msg.timestamp}}:</b>
+{{msg.content}}
+<br>
+{% endfor %}
+<form method="post" action="/send/">
+{% csrf_token %}
+<textarea name="content" rows="10" cols="30" ></textarea>
+<br>
+<br>
+<button type="submit">Send</button>
+<input type="hidden" name="nickname" value={{nickname}}>
+</form>
+{% endblock %}
