@@ -21,7 +21,7 @@ mccabe==0.6.1
 more-itertools==8.2.0
 mysql==0.0.2
 mysqlclient==1.4.6
-numpy==1.18.1
+numpy==1.22.0
 packaging==20.1
 pep8==1.7.1
 Pillow==7.1.1
